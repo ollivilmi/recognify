@@ -3,9 +3,11 @@
 .navBar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-color: rgb(82, 82, 82);
+    background-color: rgb(111, 118, 156);
     height: 5em;
     padding: 1em;
+    font-family: "Titillium Web", sans-serif;
+
 }
 
 .titleButton {
@@ -48,6 +50,7 @@
     padding: 1em;
     border: 1px solid black;
     background-color: white;
+    border-radius: 5px;
 }
 
 .category {
@@ -73,7 +76,11 @@
 /* Global */
 
 html {
-    background: rgb(65, 65, 65);
+    background: rgb(25, 41, 56);
+}
+
+#root {
+    font-family: 'Kosugi Maru', sans-serif;
 }
 
 a {
@@ -82,6 +89,6 @@ a {
 }
 
 button {
-    background: rgb(80, 80, 80);
+    background: rgb(0, 0, 0);
     color: white;
 }

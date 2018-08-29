@@ -3,7 +3,7 @@
 .navBar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-color: lightgrey;
+    background-color: rgb(82, 82, 82);
     height: 5em;
     padding: 1em;
 }
@@ -47,20 +47,22 @@
     margin: 1em;
     padding: 1em;
     border: 1px solid black;
-    background: white;
+    background-color: white;
 }
 
 .category {
     height: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .category > h4 {
     text-align: center;
-    height: 10%;
+    width: 100%;
 }
 
 .gridImage {
-    max-height: 5em;
+    width: 100%;
     max-width: 5em;
 }
 
@@ -70,6 +72,16 @@
 
 /* Global */
 
-#root {
-    background: grey;
+html {
+    background: rgb(65, 65, 65);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background: rgb(80, 80, 80);
+    color: white;
 }

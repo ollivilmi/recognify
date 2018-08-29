@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './app.css';
+import ImageGrid from './Grid';
+import NavBar from './Nav';
+import Category from './Category';
 
-const ORIGIN = window.location.origin;
 const hardCodedCategories = [
   "Category 1",
   "Category 2",
@@ -9,96 +11,29 @@ const hardCodedCategories = [
   "Category 4",
   "Category 5",
 ];
+const ORIGIN = window.location.origin;
 
-class TitleButton extends Component {
-  render() {
-    return (
-      <button className="titleButton" onClick={this.props.onClick}>
-        {this.props.title}
-      </button>
-    )
-  }
-}
-
-class SearchBar extends Component {
-  render() {
-    return (
-      <div className="searchBar">
-        <input type="text" className="searchInput"/>
-        <button onClick={this.props.onClick} className="searchButton">Search</button>
-      </div>
-    )
-  }
-}
-
-class NavBar extends Component {
-  render() {
-    return (
-      <div className="navBar">
-        <TitleButton onClick={this.props.handleClick} title="Recognify"/>
-        <SearchBar onClick={this.props.handleClick}/>
-      </div>
-    )
-  }
-}
-
-class Image extends Component {
-  render() {
-    return (
-      <div className="gridImage">
-          <img src={this.props.src} alt={this.props.alt}></img>
-      </div>
-    )
-  }
-}
-
-class Category extends Component {
-  getTitle = () => {
-    if (this.props.title != null) {
-      return <h4>{this.props.title}</h4>;
-    }
-  }
-
-  render() {
-    return (
-      <a href={this.props.src} className="category">
-        {this.getTitle()}
-        <Image src={this.props.src} alt={this.props.alt}/>
-      </a>
-    )
-  }
-}
-
-class ImageGrid extends Component {
-  getTitle = () => {
-    if (this.props.categories != null) {
-      const title = this.props.categories[Math.floor(Math.random() * 5)];
-      return title;
-    }
-    return null;
-  }
-
-  grid = dir => {
+class Options extends Component {
+  getImages = () => {
     const images = require.context("../public/images", false, /\.(png|jpe?g|svg)$/);
     return images.keys().map((item, index) => {
-      return (
-        <div className="grid-item" key={index}>
-         <Category 
-         src={item.replace("./", ORIGIN + "/images/")} 
-         alt={index}
-         title={this.getTitle()}/>
-        </div>
-      );
+      return {
+        src: item.replace("./", ORIGIN + "/images/"),
+        alt: index,
+        category: null
+      };
     });
   }
 
   render() {
-    return (
-      <div className="grid-container">
-        {this.grid(this.props.ctx)}
-      </div>
-    )
-  }
+    if (this.props.categories != null) {
+      return <Category images={this.getImages()} categories={this.props.categories}/>
+    } else {
+      return (
+        <ImageGrid images={this.getImages()}/>
+      );
+    }
+  } 
 }
 
 class App extends Component {
@@ -119,8 +54,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar handleClick={this.handleClick}/>
-        <ImageGrid categories={this.state.categories}/>
+        <NavBar title="Recognify" handleClick={this.handleClick}/>
+        <Options categories={this.state.categories}/>
       </div>
     )
   }

@@ -1,0 +1,26 @@
+[{
+    "src": "http://localhost:3000/images/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg",
+    "alt": 0,
+    "category": "Food"
+},
+{
+    "src": "http://localhost:3000/images/Red_Apple.jpg",
+    "alt": 1,
+    "category": "Food"
+},
+{
+    "src": "http://localhost:3000/images/pizza.jpg",
+    "alt": 2,
+    "category": "Food"
+},
+{
+    "src": "http://localhost:3000/images/random-image-1.png",
+    "alt": 3,
+    "category": "Person"
+},
+{
+    "src": "http://localhost:3000/images/random-image-2.jpg",
+    "alt": 4,
+    "category": "Animal"
+}
+]

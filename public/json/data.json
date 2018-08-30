@@ -1,26 +1,33 @@
 [{
-    "src": "http://localhost:3000/images/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg",
-    "alt": 0,
-    "category": "Food"
-},
-{
-    "src": "http://localhost:3000/images/Red_Apple.jpg",
-    "alt": 1,
-    "category": "Food"
-},
-{
-    "src": "http://localhost:3000/images/pizza.jpg",
-    "alt": 2,
-    "category": "Food"
-},
-{
-    "src": "http://localhost:3000/images/random-image-1.png",
-    "alt": 3,
-    "category": "Person"
-},
-{
-    "src": "http://localhost:3000/images/random-image-2.jpg",
-    "alt": 4,
-    "category": "Animal"
-}
-]
+	"src": "http://localhost:3000/images/Common-dog-behaviors-explained.jpg",
+	"alt": 0,
+	"category": "animal"
+}, {
+	"src": "http://localhost:3000/images/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg",
+	"alt": 1,
+	"category": "food"
+}, {
+	"src": "http://localhost:3000/images/Red_Apple.jpg",
+	"alt": 2,
+	"category": "food"
+}, {
+	"src": "http://localhost:3000/images/k2-_864ef38f-4c7e-427e-8a3c-7415272c6919.v1.jpg",
+	"alt": 3,
+	"category": "animal"
+}, {
+	"src": "http://localhost:3000/images/pizza.jpg",
+	"alt": 4,
+	"category": "food"
+}, {
+	"src": "http://localhost:3000/images/poy_benbernanke.jpg",
+	"alt": 5,
+	"category": "person"
+}, {
+	"src": "http://localhost:3000/images/random-image-1.png",
+	"alt": 6,
+	"category": "person"
+}, {
+	"src": "http://localhost:3000/images/random-image-2.jpg",
+	"alt": 7,
+	"category": "animal"
+}]
